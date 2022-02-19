@@ -1,5 +1,5 @@
 const shortid = require('shortid')
-const marked = require('marked')
+const { marked } = require('marked')
 const DOMPurify = require('dompurify')
 
 marked.setOptions({
