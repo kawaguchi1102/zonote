@@ -1,4 +1,4 @@
-const shortid = require('shortid')
+const { nanoid } = require('nanoid')
 const { marked } = require('marked')
 const DOMPurify = require('dompurify')
 
@@ -15,7 +15,7 @@ const removeNoteElm = document.getElementById('remove-note')
 const colorPickerElm = document.getElementById('color-picker')
 
 function generateId () {
-  const id = shortid().replace(/\W/g, '') + new Date().getTime()
+  const id = nanoid().replace(/\W/g, '') + new Date().getTime()
   return id.split('').sort(() => 0.5 - Math.random()).join('')
 }
 
